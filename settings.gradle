@@ -8,9 +8,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "DS"
 include ':app'
-<<<<<<< HEAD
-=======
 include ':MVPCore'
 include ':Resources'
->>>>>>> 52ceb8f3378095282ed9282985535c2680d7cbcd
 include ':Common'

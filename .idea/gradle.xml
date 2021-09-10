@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
@@ -11,11 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Common" />
-<<<<<<< HEAD
-=======
             <option value="$PROJECT_DIR$/MVPCore" />
             <option value="$PROJECT_DIR$/Resources" />
->>>>>>> 52ceb8f3378095282ed9282985535c2680d7cbcd
             <option value="$PROJECT_DIR$/app" />
           </set>
         </option>
