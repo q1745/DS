@@ -2,9 +2,9 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
 }
-
-//def version=rootProject.ext.dependenciesVersion
-//def config=rootProject.ext.dependenciesConfig
+apply plugin: 'kotlin-kapt'
+def configs=rootProject.ext.dependenciesConfig
+def versions=rootProject.ext.dependenciesVersion
 android {
     compileSdk 31
 
@@ -41,4 +41,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    api configs.dagger
+    kapt 'com.google.dagger:dagger-compiler:2.38.1'
 }

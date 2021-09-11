@@ -1,5 +1,6 @@
 ext{
     dependenciesVersion=[
-
+            dagger:"2.38.1",
+            glide:"4.12.0"
     ]
 }

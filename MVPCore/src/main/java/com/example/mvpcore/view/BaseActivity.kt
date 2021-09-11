@@ -5,18 +5,24 @@ import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mvpcore.common.ActivityManager
 
 abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(getLayoutId())
+        addActivity()
         if (IsClearBar()){
             ClearBar()
         }
         initView()
         initData()
         initEvent()
+    }
+
+    fun addActivity(){
+        ActivityManager.instance.addActivity(this)
     }
 
     /**
@@ -60,5 +66,10 @@ abstract class BaseActivity : AppCompatActivity() {
      */
     fun jumpActivity(clazz: Class<AppCompatActivity>){
         startActivity(Intent(this@BaseActivity,clazz))
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        ActivityManager.instance.finishActivity(this)
     }
 }
