@@ -8,4 +8,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "DS"
 include ':app'
+
 include ':stockpile'
+
+include ':MVPCore'
+include ':Resources'
+include ':Common'
+

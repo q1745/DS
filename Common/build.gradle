@@ -1,15 +1,14 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
-    id 'org.greenrobot.greendao' // apply plugins 必要
 }
 
 android {
-    compileSdkVersion 31
+    compileSdk 31
 
     defaultConfig {
-        minSdkVersion 24
-        targetSdkVersion 31
+        minSdk 24
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -27,15 +26,6 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-    dependencies {
-        implementation 'org.greenrobot:greendao:3.3.0' // add library 必要
-    }
-    greendao {
-        schemaVersion 1 //数据库版本号
-        daoPackage 'com.example.stockpile.db'// 设置DaoMaster、DaoSession、Dao   一般包名+文件夹名
-        targetGenDir 'src/main/java'//设置DaoMaster、DaoSession、Dao目录   文件生成的目录，相当于父级目录
-    }
-
     kotlinOptions {
         jvmTarget = '1.8'
     }
