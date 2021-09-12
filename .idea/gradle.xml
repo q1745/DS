@@ -11,6 +11,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Common" />
+            <option value="$PROJECT_DIR$/DaggerLib" />
             <option value="$PROJECT_DIR$/MVPCore" />
             <option value="$PROJECT_DIR$/Resources" />
             <option value="$PROJECT_DIR$/app" />
