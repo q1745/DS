@@ -1,16 +1,18 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-}
+//    id 'kotlin-android-extensions'
 
+}
+def allVersion = rootProject.ext.versions
 android {
-    compileSdk 31
+    compileSdk allVersion.compilesdk
 
     defaultConfig {
         applicationId "com.example.ds"
-        minSdk 21
-        targetSdk 31
-        versionCode 1
+        minSdk allVersion.minsdk
+        targetSdk allVersion.targetsdk
+        versionCode allVersion.versioncode
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -26,6 +28,7 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
     kotlinOptions {
         jvmTarget = '1.8'
     }
@@ -37,6 +40,8 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation project(path: ':stockpile')
+    implementation project(path: ':Resources')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
