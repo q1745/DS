@@ -3,4 +3,11 @@ ext{
             dagger:"2.38.1",
             glide:"4.12.0"
     ]
+    versions=[
+            compilesdk:31,
+            minsdk:24,
+            targetsdk:31,
+            versioncode:1,
+            versionname:"1.0"
+    ]
 }
