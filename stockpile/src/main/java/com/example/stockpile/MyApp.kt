@@ -2,6 +2,7 @@ package com.example.stockpile
 
 import android.app.Application
 import android.content.Context
+import com.alibaba.android.arouter.launcher.ARouter
 
 /**
 @Name:yao
@@ -15,6 +16,9 @@ open class MyApp :Application(){
     override fun onCreate() {
         super.onCreate()
         context=this
+        ARouter.openLog()
+        ARouter.openDebug()
+        ARouter.getInstance().inject(this)
     }
 
     companion object{
