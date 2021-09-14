@@ -7,12 +7,18 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+<<<<<<< HEAD
         <option name="gradleJvm" value="Embedded JDK" />
+=======
+        <option name="gradleJvm" value="1.8" />
+>>>>>>> 46c88d97b7d2a5f4b6dc262782eaeddba69ab3ac
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Common" />
+            <option value="$PROJECT_DIR$/DaggerLib" />
             <option value="$PROJECT_DIR$/MVPCore" />
+            <option value="$PROJECT_DIR$/Net" />
             <option value="$PROJECT_DIR$/Resources" />
             <option value="$PROJECT_DIR$/Shopping Cart" />
             <option value="$PROJECT_DIR$/app" />
