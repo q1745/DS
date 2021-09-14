@@ -19,32 +19,6 @@ buildscript {
 plugins {
     id "calces.appconfig" version "3.3.0-alpha01"
 }
-
-appConfig {
-    debugEnable false
-    apps {
-        app {
-            name ":app"
-            applicationName ".MyApp"
-            mainActivity ".MainActivity"
-//            modules ':'
-        }
-    }
-
-    modules {
-//        modules1 {
-//            applicationId "com.xxxx.modules1"
-//            mainActivity ".Modules1Activity"
-//            isRunAlone true
-//        }
-//
-//        modules2 {
-//            applicationId "com.xxxx.modules2"
-//            mainActivity ".Modules2Activity"
-//            isRunAlone true
-//        }
-    }
-}
 apply from:"gradles/Base.gradle"
 task clean(type: Delete) {
     delete rootProject.buildDir

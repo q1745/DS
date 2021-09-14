@@ -9,8 +9,6 @@ import com.alibaba.android.arouter.launcher.ARouter
  */
 class BaseApplication : Application() {
 
-
-
     override fun onCreate() {
         super.onCreate()
         context = this
