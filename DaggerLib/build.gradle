@@ -4,14 +4,15 @@ plugins {
     id 'kotlin-kapt'
 }
 def configs = rootProject.ext.dependenciesConfig
+def allVersion = rootProject.ext.versions
 android {
-    compileSdk 31
+    compileSdk allVersion.compilesdk
 
     defaultConfig {
-        minSdk 21
-        targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        minSdk allVersion.minsdk
+        targetSdk allVersion.targetsdk
+        versionCode allVersion.versioncode
+        versionName allVersion.versionname
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
