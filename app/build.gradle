@@ -16,11 +16,6 @@ android {
         versionCode allVersion.versioncode
         versionName allVersion.versionname
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
-            }
-        }
 
     }
 
@@ -48,10 +43,8 @@ dependencies {
     implementation project(path: ':stockpile')
     implementation project(path: ':Net')
     implementation project(path: ':Resources')
+    implementation project(path: ':Common')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-    implementation configs.arouter //ARouter依赖
-    kapt configs.arouter_anno //ARouter依赖
 }

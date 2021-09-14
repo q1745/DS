@@ -1,27 +1,31 @@
-package com.example.stockpile
+package com.example.common
 
 import android.app.Application
 import android.content.Context
 import com.alibaba.android.arouter.launcher.ARouter
 
 /**
-@Name:yao
-@CreateDate: 2021/9/11 8:07
-@ProjectName: DS
-@Package: com.example.stockpile
-@ClassName: MyApp
+ * Application基类
  */
-open class MyApp :Application(){
-    lateinit var appComponent: Application
+class BaseApplication : Application() {
+
+
+
     override fun onCreate() {
         super.onCreate()
-        context=this
+        context = this
         ARouter.openLog()
         ARouter.openDebug()
         ARouter.init(this)
     }
 
+    /**
+     * 获取Application的上下文
+     */
     companion object{
         lateinit var context: Context
     }
+
+
+
 }
