@@ -15,7 +15,6 @@ include ':MVPCore'
 include ':Resources'
 include ':Common'
 
-include ':Shopping Cart'
 
 include ':DaggerLib'
 include ':Net'
