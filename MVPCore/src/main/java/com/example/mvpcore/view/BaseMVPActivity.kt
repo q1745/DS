@@ -3,6 +3,10 @@ package com.example.mvpcore.view
 import android.os.Build
 import com.example.mvpcore.annotation.Presenter
 
+/**
+ * 基于MVP框架的Activity的基类
+ * 利用注解+反射实现对应多个Presenter
+ */
 abstract class BaseMVPActivity : BaseActivity(){
 
     init {
