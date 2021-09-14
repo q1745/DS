@@ -29,6 +29,7 @@ class LoginInterImpl :IInterceptor {
             callback?.onContinue(postcard)
         }else{
             when(path){
+                //需要拦截的页面
 
                 else -> callback?.onContinue(postcard)
             }
