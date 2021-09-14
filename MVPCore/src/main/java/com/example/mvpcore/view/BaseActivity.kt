@@ -4,9 +4,13 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mvpcore.common.ActivityManager
 
+/**
+ * Activity基类
+ */
 abstract class BaseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,8 +72,20 @@ abstract class BaseActivity : AppCompatActivity() {
         startActivity(Intent(this@BaseActivity,clazz))
     }
 
+    /**
+     * 销毁方法出栈
+     */
     override fun onDestroy() {
         super.onDestroy()
         ActivityManager.instance.finishActivity(this)
     }
+
+    /**
+     * 展示消息
+     */
+    fun showToast(msg:String){
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+    }
+
+
 }
