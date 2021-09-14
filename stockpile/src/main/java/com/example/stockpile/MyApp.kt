@@ -18,7 +18,7 @@ open class MyApp :Application(){
         context=this
         ARouter.openLog()
         ARouter.openDebug()
-        ARouter.getInstance().inject(this)
+        ARouter.init(this)
     }
 
     companion object{
