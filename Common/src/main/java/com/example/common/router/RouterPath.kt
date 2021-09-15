@@ -4,8 +4,8 @@ object RouterPath {
 
     class UserCenter{
         companion object{
-            const val LOGIN_ACTIVITY : String = ""
-            const val REGISTER_ACTIVITY : String = ""
+            const val PATH_LOGIN : String = ""
+            const val PATH_REGISTER : String = ""
         }
     }
 }
