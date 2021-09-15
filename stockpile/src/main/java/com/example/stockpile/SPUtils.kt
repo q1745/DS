@@ -1,7 +1,7 @@
 package com.example.stockpile
-
 import android.content.Context
 import android.content.SharedPreferences
+import com.example.common.BaseApplication
 
 /**
 @Name:yao
@@ -11,7 +11,7 @@ import android.content.SharedPreferences
 @ClassName: SPUtils
  */
 object SPUtils {
-    private var sp:SharedPreferences=MyApp.context.getSharedPreferences("sq",Context.MODE_PRIVATE)
+    private var sp:SharedPreferences= BaseApplication.context.getSharedPreferences("sq",Context.MODE_PRIVATE)
     private var ed: SharedPreferences.Editor
 
     init {
