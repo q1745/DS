@@ -6,7 +6,8 @@ def configs = rootProject.ext.dependenciesConfig
 def versions=rootProject.ext.dependenciesVersion
 def allVersion = rootProject.ext.versions
 android {
-    compileSdk allVersion.compilesdk
+    compileSdkVersion allVersion.compilesdk
+
 
     defaultConfig {
         minSdk allVersion.minsdk
@@ -42,4 +43,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+    api configs.glide
 }
