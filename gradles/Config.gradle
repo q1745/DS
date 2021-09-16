@@ -4,6 +4,7 @@ ext{
             dagger:"com.google.dagger:dagger:${version.dagger}",
             glide:"com.github.bumptech.glide:glide:${version.glide}",
             arouter:"com.alibaba:arouter-api:${version.arouter}",
-            arouter_anno:"com.alibaba:arouter-compiler:${version.arouter_anno}"
+            arouter_anno:"com.alibaba:arouter-compiler:${version.arouter_anno}",
+            bottombar:"com.ashokvarma.android:bottom-navigation-bar:${version.bottombar}"
     ]
 }

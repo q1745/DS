@@ -1,7 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.DS" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.DS" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
+        <!--<item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>-->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
@@ -12,5 +14,12 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+    <style name="Theme.start" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--全屏-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!--设置进入app图片-->
+        <item name="android:windowBackground">@drawable/img_startapp</item>
     </style>
 </resources>
