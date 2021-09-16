@@ -1,18 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android_Files/Practical_first/DS/Resources/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.16145833333333334" />
         <entry key="..\:/Android_Files/Practical_first/DS/Resources/src/main/res/drawable/img_startapp.xml" value="0.13333333333333333" />
         <entry key="..\:/Android_Files/Practical_first/DS/app/src/main/res/layout/activity_main.xml" value="0.1" />
+<<<<<<< HEAD
         <entry key="..\:/Android_Files/Practical_first/DS/app/src/main/res/layout/fragment_test.xml" value="0.2390625" />
+=======
+        <entry key="..\:/workspace/DS/Sort/src/main/res/drawable/recyclerview_bolder.xml" value="0.27897435897435896" />
+        <entry key="..\:/workspace/DS/Sort/src/main/res/layout/activity_main.xml" value="0.2713541666666667" />
+        <entry key="..\:/workspace/DS/Sort/src/main/res/layout/fragment_sort_layout.xml" value="0.2713541666666667" />
+>>>>>>> 3461103b057773b9a9ae2680160785f851a67bf8
         <entry key="..\:/workspace/DS/app/src/main/res/layout/activity_main.xml" value="0.12364130434782608" />
       </map>
     </option>
   </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
