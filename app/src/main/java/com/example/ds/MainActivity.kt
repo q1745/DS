@@ -2,7 +2,6 @@ package com.example.ds
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.net.RetrofitFactory
 
 
 class MainActivity : AppCompatActivity() {

@@ -15,8 +15,8 @@
             <option value="$PROJECT_DIR$/MVPCore" />
             <option value="$PROJECT_DIR$/Net" />
             <option value="$PROJECT_DIR$/Resources" />
+            <option value="$PROJECT_DIR$/Stockpile" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/stockpile" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
