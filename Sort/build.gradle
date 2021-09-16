@@ -2,17 +2,21 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
-
+def configs=rootProject.ext.dependenciesConfig
+def versions=rootProject.ext.dependenciesVersion
+def allVersion = rootProject.ext.versions
 android {
-    compileSdkVersion 31
+    compileSdk allVersion.compilesdk
 
     defaultConfig {
         applicationId "com.example.sort"
-        minSdkVersion 21
-        targetSdkVersion 31
-        versionCode 1
-        versionName "1.0"
+        minSdk allVersion.minsdk
+        targetSdk allVersion.targetsdk
+        versionCode allVersion.versioncode
+        versionName allVersion.versionname
+
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -43,7 +47,9 @@ dependencies {
     implementation project(path: ':Net')
     implementation project(path: ':Util')
     implementation project(path: ':Common')
+    implementation project(path: ':DI')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    kapt 'com.google.dagger:dagger-compiler:2.38.1'
 }
