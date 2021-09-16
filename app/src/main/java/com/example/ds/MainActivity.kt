@@ -1,16 +1,12 @@
 package com.example.ds
 
-import android.annotation.SuppressLint
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentPagerAdapter
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.ashokvarma.bottomnavigation.BottomNavigationItem
-import com.example.ds.adapter.MainVpAdapter
 
 class MainActivity : AppCompatActivity() {
 
@@ -30,9 +26,6 @@ class MainActivity : AppCompatActivity() {
         init()
 
         fragments.add(TestFragment())
-
-        //适配器
-//        vpAdapter = MainVpAdapter(supportFragmentManager, FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT,fragments)
 
         //设置ViewPager适配器
         main_vp.adapter = object : FragmentStatePagerAdapter(supportFragmentManager,FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
