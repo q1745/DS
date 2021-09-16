@@ -6,8 +6,8 @@ ext{
             arouter_anno:"1.2.2"
     ]
     versions=[
-            compilesdk:31,
-            minsdk:24,
+            compilesdk:30,
+            minsdk:21,
             targetsdk:31,
             versioncode:1,
             versionname:"1.0"

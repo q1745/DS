@@ -7,18 +7,19 @@
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="gradleJvm" value="1.8" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/Common" />
-            <option value="$PROJECT_DIR$/DaggerLib" />
+            <option value="$PROJECT_DIR$/DI" />
             <option value="$PROJECT_DIR$/MVPCore" />
             <option value="$PROJECT_DIR$/Net" />
             <option value="$PROJECT_DIR$/Resources" />
             <option value="$PROJECT_DIR$/Sort" />
+            <option value="$PROJECT_DIR$/Stockpile" />
             <option value="$PROJECT_DIR$/Util" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/stockpile" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
