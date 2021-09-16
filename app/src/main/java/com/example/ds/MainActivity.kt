@@ -8,19 +8,20 @@ import androidx.viewpager.widget.ViewPager
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.ashokvarma.bottomnavigation.BottomNavigationItem
 
+/**
+ * 用来接收底部导航与ViewPager
+ */
 class MainActivity : AppCompatActivity() {
 
     lateinit var main_vp: ViewPager
     lateinit var main_bottomBar: BottomNavigationBar
     //用来接收Fragment
     var fragments: MutableList<Fragment> = mutableListOf()
-//    var vpAdapter: MainVpAdapter? = null;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         //绘制布局前换位原来的布局样式
         setTheme(R.style.Theme_DS)
         window.setBackgroundDrawable(null)
-
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         init()
