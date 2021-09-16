@@ -2,31 +2,11 @@ package com.example.ds
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-<<<<<<< HEAD
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.ashokvarma.bottomnavigation.BottomNavigationItem
-=======
-import android.util.Log
-
-
-import android.view.View
-import com.example.Bbody
-import com.example.net.RetrofitFactory
-import io.reactivex.Observer
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.schedulers.Schedulers
-
-import kotlinx.android.synthetic.main.activity_main.*
-
->>>>>>> 3461103b057773b9a9ae2680160785f851a67bf8
-
-
-import kotlinx.android.synthetic.main.activity_main.*
-import okhttp3.RequestBody
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,7 +14,6 @@ class MainActivity : AppCompatActivity() {
     lateinit var main_bottomBar: BottomNavigationBar
     //用来接收Fragment
     var fragments: MutableList<Fragment> = mutableListOf()
-//    var vpAdapter: MainVpAdapter? = null;
 
     override fun onCreate(savedInstanceState: Bundle?) {
         //绘制布局前换位原来的布局样式
@@ -83,35 +62,8 @@ class MainActivity : AppCompatActivity() {
 //                main_bottomBar.selectTab(position)
             }
 
-<<<<<<< HEAD
             override fun onPageSelected(position: Int) {
                 main_bottomBar.selectTab(position)
-=======
-        btn.setOnClickListener(object : View.OnClickListener{
-            override fun onClick(p0: View?) {
-                RetrofitFactory.retrofitFactory.retrofit.create(Api::class.java)
-                    .getList(Bbody(0))
-                    .subscribeOn(Schedulers.io())
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribe(object : Observer<Bean>{
-                        override fun onSubscribe(d: Disposable) {
-
-                        }
-
-                        override fun onNext(t: Bean) {
-                            Log.i("TAG", "onNext: "+t.data.get(0).categoryName)
-                        }
-
-                        override fun onError(e: Throwable) {
-
-                        }
-
-                        override fun onComplete() {
-
-                        }
-
-                    })
->>>>>>> 3461103b057773b9a9ae2680160785f851a67bf8
             }
 
             override fun onPageScrollStateChanged(state: Int) {
