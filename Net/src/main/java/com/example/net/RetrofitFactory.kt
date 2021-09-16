@@ -31,7 +31,7 @@ class RetrofitFactory {
     val retrofit: Retrofit
     init {
         retrofit=Retrofit.Builder()
-            .baseUrl(BuildConfig.BASEURL)
+            .baseUrl(Config.BASEURL)
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(createOKHttpClient())

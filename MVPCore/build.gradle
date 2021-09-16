@@ -5,14 +5,15 @@ plugins {
 apply plugin: 'kotlin-kapt'
 def configs=rootProject.ext.dependenciesConfig
 def versions=rootProject.ext.dependenciesVersion
+def allVersion = rootProject.ext.versions
 android {
-    compileSdk 31
+    compileSdk allVersion.compilesdk
 
     defaultConfig {
-        minSdk 21
-        targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        minSdk allVersion.minsdk
+        targetSdk allVersion.targetsdk
+        versionCode allVersion.versioncode
+        versionName allVersion.versionname
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -41,7 +42,7 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
+    //Dagger2
     api configs.dagger
     kapt 'com.google.dagger:dagger-compiler:2.38.1'
 }

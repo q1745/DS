@@ -1,6 +1,15 @@
 ext{
     dependenciesVersion=[
             dagger:"2.38.1",
-            glide:"4.12.0"
+            glide:"4.12.0",
+            arouter:"1.4.1",
+            arouter_anno:"1.2.2"
+    ]
+    versions=[
+            compilesdk:31,
+            minsdk:24,
+            targetsdk:31,
+            versioncode:1,
+            versionname:"1.0"
     ]
 }

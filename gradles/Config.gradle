@@ -2,6 +2,8 @@ def version=rootProject.ext.dependenciesVersion
 ext{
     dependenciesConfig=[
             dagger:"com.google.dagger:dagger:${version.dagger}",
-            glide:"com.github.bumptech.glide:glide:${version.glide}"
+            glide:"com.github.bumptech.glide:glide:${version.glide}",
+            arouter:"com.alibaba:arouter-api:${version.arouter}",
+            arouter_anno:"com.alibaba:arouter-compiler:${version.arouter_anno}"
     ]
 }

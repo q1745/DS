@@ -1,18 +1,30 @@
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
 }
 def configs = rootProject.ext.dependenciesConfig
 def versions=rootProject.ext.dependenciesVersion
+def allVersion = rootProject.ext.versions
 android {
-    compileSdk 31
+    compileSdk allVersion.compilesdk
 
     defaultConfig {
-        minSdk 24
-        targetSdk 31
-        versionCode 1
-        versionName "1.0"
+        minSdk allVersion.minsdk
+        targetSdk allVersion.targetsdk
+        versionCode allVersion.versioncode
+        versionName allVersion.versionname
 
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'x86'
+        }
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -40,6 +52,11 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
     api configs.glide
+    api configs.arouter //ARouter依赖
+    kapt configs.arouter_anno //ARouter依赖
+
+
+    compile 'com.tencent.bugly:crashreport:3.4.4' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    compile 'com.tencent.bugly:nativecrashreport:3.9.2' //其中latest.release指代最新Bugly NDK版本号，也可以指定明确的版本号，例如3.0
 }
