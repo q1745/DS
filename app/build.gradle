@@ -49,6 +49,8 @@ dependencies {
     implementation project(path: ':Net')
     implementation project(path: ':Resources')
     implementation project(path: ':Common')
+    implementation project(path: ':Util')
+    implementation project(path: ':MVPCore')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

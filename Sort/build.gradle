@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'kotlin-android-extensions'
 }
 
 android {
@@ -41,6 +42,8 @@ dependencies {
     implementation project(path: ':DaggerLib')
     implementation project(path: ':Resources')
     implementation project(path: ':Net')
+    implementation project(path: ':Util')
+    implementation project(path: ':Common')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

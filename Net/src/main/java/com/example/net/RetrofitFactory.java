@@ -4,7 +4,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.example.net.api.TokenApi;
-import com.example.net.common.Config;
+
 import com.example.net.protocol.TokenRespEntity;
 import com.example.net.retrofit.CustomGsonConverterFactory;
 import com.example.net.retrofit.LiveDataCallAdapterFactory;

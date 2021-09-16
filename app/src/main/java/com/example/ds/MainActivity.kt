@@ -4,8 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.example.common.utils.Base64Util
-import com.tencent.bugly.crashreport.CrashReport
+import com.example.util.utils.Base64Util
 import kotlinx.android.synthetic.main.activity_main.*
 
 

@@ -6,8 +6,7 @@ import com.alibaba.android.arouter.facade.annotation.Interceptor
 import com.alibaba.android.arouter.facade.callback.InterceptorCallback
 import com.alibaba.android.arouter.facade.template.IInterceptor
 import com.example.common.BaseConstant
-import com.example.common.router.RouterPath
-import com.example.common.utils.Base64Util
+import com.example.util.utils.Base64Util
 import com.example.common.utils.SpUtil
 
 @Interceptor(priority = 1,name = "isLoginInterceptor")
