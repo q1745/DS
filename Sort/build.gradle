@@ -68,5 +68,6 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    kapt 'com.google.dagger:dagger-compiler:2.38.1'
+    kapt "com.google.dagger:dagger-compiler:$versions.dagger"
+    implementation configs.baseAdapter
 }
