@@ -1,8 +1,13 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-android-extensions'
-    id 'kotlin-kapt'
+if (isDebugSort.toBoolean()) {
+    apply plugin: 'com.android.application'
+    apply plugin: 'kotlin-android'
+    apply plugin: 'kotlin-android-extensions'
+    apply plugin: 'kotlin-kapt'
+} else {
+    apply plugin: 'com.android.library'
+    apply plugin: 'kotlin-android'
+    apply plugin: 'kotlin-android-extensions'
+    apply plugin: 'kotlin-kapt'
 }
 def configs=rootProject.ext.dependenciesConfig
 def versions=rootProject.ext.dependenciesVersion
@@ -11,7 +16,9 @@ android {
     compileSdk allVersion.compilesdk
 
     defaultConfig {
-        applicationId "com.example.sort"
+        if (isDebugSort.toBoolean()) {
+            applicationId "com.example.sort"
+        }
         minSdk allVersion.minsdk
         targetSdk allVersion.targetsdk
         versionCode allVersion.versioncode
@@ -33,6 +40,16 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    sourceSets {
+        main {
+            if (isDebugSort.toBoolean()) {
+                manifest.srcFile "src/main/AndroidManifest.xml"
+            } else {
+                manifest.srcFile "src/main/module/AndroidManifest.xml"
+            }
+        }
     }
 }
 
