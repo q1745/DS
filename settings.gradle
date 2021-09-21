@@ -3,6 +3,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url 'https://maven.aliyun.com/repository/public/'
+        }
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
@@ -23,3 +26,4 @@ include ':Sort'
 include ':Util'
 
 include ':DI'
+include ':Goods'

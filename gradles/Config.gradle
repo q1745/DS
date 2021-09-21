@@ -6,6 +6,7 @@ ext{
             arouter:"com.alibaba:arouter-api:${version.arouter}",
             arouter_anno:"com.alibaba:arouter-compiler:${version.arouter_anno}",
             bottombar:"com.ashokvarma.android:bottom-navigation-bar:${version.bottombar}",
-            baseAdapter:"com.github.CymChad:BaseRecyclerViewAdapterHelper:${version.baseAdapter}"
+            baseAdapter:"com.github.CymChad:BaseRecyclerViewAdapterHelper:${version.baseAdapter}",
+            banner:"com.youth.banner:banner:${version.banner}"
     ]
 }
