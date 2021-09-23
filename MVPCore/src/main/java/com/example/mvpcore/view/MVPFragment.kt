@@ -6,13 +6,10 @@ import com.example.di.BaseApp
 import com.example.di.component.ActivityComponent
 import com.example.di.component.DaggerActivityComponent
 import com.example.di.module.ActivityModule
-import com.example.mvpcore.BasePresenter
-import javax.inject.Inject
 
-abstract class MVPFragment<P : BasePresenter<*,*>> : BaseFragment(){
 
-    @Inject
-    protected lateinit var presenter:P
+abstract class MVPFragment : BaseFragment(){
+
 
     protected var activityComponent: ActivityComponent? = null
 

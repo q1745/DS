@@ -2,7 +2,6 @@ package com.example.home
 
 import android.content.Context
 import android.graphics.Color
-import android.util.Log
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -13,7 +12,7 @@ import com.bumptech.glide.Glide
 import com.example.home.adapter.HomeDiscountAdapter
 import com.example.home.adapter.MyAdapter
 import com.example.home.common.*
-import com.example.mvpcore.view.BaseActivity
+import com.example.mvpcore.view.BaseFragment
 import com.youth.banner.BannerConfig
 import com.youth.banner.loader.ImageLoader
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -26,7 +25,7 @@ import kotlinx.android.synthetic.main.layout.*
 @Package: com.example.home
 @ClassName: HomeFragment
  */
-class HomeFragment :BaseActivity(){
+class HomeFragment :BaseFragment(){
     private var mScreenWidth = 0
     private val MIN_SCALE = .7f
     private val MAX_SCALE = 1.5f
@@ -53,10 +52,10 @@ class HomeFragment :BaseActivity(){
         initNews()
         initViewPager()
         tv_goodstype_pc.setOnClickListener {
-            Toast.makeText(this,"电脑",Toast.LENGTH_LONG).show()
+            Toast.makeText(context,"电脑",Toast.LENGTH_LONG).show()
         }
         tv_goodstype_live.setOnClickListener {
-            Toast.makeText(this,"直播",Toast.LENGTH_LONG).show()
+            Toast.makeText(context,"直播",Toast.LENGTH_LONG).show()
         }
     }
 
@@ -84,11 +83,11 @@ class HomeFragment :BaseActivity(){
      * 折扣
      */
     private fun initDiscount(){
-        val manager = LinearLayoutManager(this)
+        val manager = LinearLayoutManager(context)
         manager.orientation=LinearLayoutManager.HORIZONTAL
         rc.layoutManager=manager
 
-        val discountAdapter = this?.let { HomeDiscountAdapter(it) }
+        val discountAdapter  = HomeDiscountAdapter(requireActivity())
         rc.adapter=discountAdapter
         if (discountAdapter != null) {
             discountAdapter.setData(mutableListOf(HOME_DISCOUNT_ONE, HOME_DISCOUNT_TWO, HOME_DISCOUNT_THREE, HOME_DISCOUNT_FOUR, HOME_DISCOUNT_FIVE,HOME_DISCOUNT_SIX, HOME_DISCOUNT_SEVEN
@@ -108,7 +107,7 @@ class HomeFragment :BaseActivity(){
      * 初始化主题
      */
     private fun initViewPager(){
-        val manager = LinearLayoutManager(this)
+        val manager = LinearLayoutManager(context)
         manager.orientation=LinearLayoutManager.HORIZONTAL
         rv_page.layoutManager = manager
         mScreenWidth = resources.displayMetrics.widthPixels

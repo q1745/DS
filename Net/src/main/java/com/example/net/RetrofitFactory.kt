@@ -29,7 +29,7 @@ class RetrofitFactory {
     val retrofit: Retrofit
     init {
         retrofit=Retrofit.Builder()
-            .baseUrl(Config.BASEURL)
+            .baseUrl("http://39.98.153.96:8088/shopapi/")
             .addConverterFactory(GsonConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(createOKHttpClient())

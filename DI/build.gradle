@@ -7,7 +7,7 @@ plugins {
 
 def configs = rootProject.ext.dependenciesConfig
 def AllVersion = rootProject.ext.versions
-
+def versions=rootProject.ext.dependenciesVersion
 android {
     compileSdkVersion AllVersion.compilesdk
 
@@ -46,5 +46,5 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     api configs.dagger
-    kapt 'com.google.dagger:dagger-compiler:2.38.1'
+    kapt "com.google.dagger:dagger-compiler:$versions.dagger"
 }

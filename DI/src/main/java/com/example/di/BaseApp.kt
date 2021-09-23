@@ -5,7 +5,7 @@ import com.example.di.component.AppComponent
 import com.example.di.component.DaggerAppComponent
 import com.example.di.module.AppModule
 
-class BaseApp : Application(){
+abstract class BaseApp : Application(){
     var daggerAppComponent: AppComponent? = null
 
     override fun onCreate() {

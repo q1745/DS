@@ -7,7 +7,9 @@
     tools:context=".MainActivity">
 
     <fragment
-        android:name="com.example.sort.mvp.view.SortFragment"
+        android:tag="@string/app_name"
+        android:id="@+id/aaa"
+        class="com.example.sort.mvp.view.FirstFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

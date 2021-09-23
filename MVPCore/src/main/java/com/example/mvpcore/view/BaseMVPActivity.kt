@@ -13,10 +13,9 @@ import javax.inject.Inject
  * 基于MVP框架的Activity的基类
  * 利用注解+反射实现对应多个Presenter
  */
-abstract class BaseMVPActivity<P : BasePresenter<*,*>> : BaseActivity(){
+abstract class BaseMVPActivity : BaseActivity(){
 
-    @Inject
-    protected lateinit var presenter:P
+
 
     protected var appComponent: ActivityComponent? = null
 

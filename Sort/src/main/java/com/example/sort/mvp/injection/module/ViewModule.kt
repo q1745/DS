@@ -1,15 +1,15 @@
 package com.example.sort.mvp.injection.module
 
-import com.example.sort.mvp.view.SortView
+import com.example.sort.mvp.view.FirstView
 import dagger.Module
 import dagger.Provides
 
 
 @Module
-class ViewModule(var view:SortView){
+class ViewModule(var view:FirstView){
 
     @Provides
-    fun provideView():SortView{
+    fun provideView():FirstView{
         return view
     }
 }

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.home.HomeFragment
 import com.example.home.R
 import kotlinx.android.synthetic.main.item.view.*
 
@@ -17,7 +18,8 @@ import kotlinx.android.synthetic.main.item.view.*
 @Package: com.example.home.adapter
 @ClassName: HomeDiscountAdapter
  */
-class HomeDiscountAdapter(context: Context):BaseRecyclerViewAdapter<String,HomeDiscountAdapter.ViewHolder>(context) {
+//
+class HomeDiscountAdapter(context: Context):BaseRecyclerViewAdapter<String,HomeDiscountAdapter.ViewHolder>(context){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(mContext)
             .inflate(R.layout.item,parent,false)
@@ -40,5 +42,7 @@ class HomeDiscountAdapter(context: Context):BaseRecyclerViewAdapter<String,HomeD
             view.tv2.paint.isAntiAlias=true
         }
     }
+
+
 
 }
