@@ -6,7 +6,8 @@ ext{
             arouter_anno:"1.2.2",
             bottombar:"2.0.5",
             baseAdapter:"3.0.0",
-            banner:"1.4.10"
+            banner:"1.4.10",
+            EventBus:"3.0.0"
     ]
     versions=[
             compilesdk:30,

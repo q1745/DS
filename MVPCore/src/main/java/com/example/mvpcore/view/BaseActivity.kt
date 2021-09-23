@@ -4,9 +4,14 @@ import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
+import android.widget.FrameLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.get
+import com.example.mvpcore.R
 import com.example.mvpcore.common.ActivityManager
+import java.nio.file.Files.find
 
 /**
  * Activity基类
@@ -88,4 +93,11 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
 
+    /**
+     * 获取根视图
+     */
+    val contentView:View
+    get() {
+        return (this.findViewById(android.R.id.content) as ViewGroup).getChildAt(0)
+    }
 }
