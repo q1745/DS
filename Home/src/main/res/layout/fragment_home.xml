@@ -39,11 +39,12 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+
             <com.youth.banner.Banner
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/margin_200"
                 android:id="@+id/banner"
-                ></com.youth.banner.Banner>
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_200"></com.youth.banner.Banner>
+
             <com.example.home.widget.NewsFlipperView
                 android:id="@+id/news"
                 android:layout_width="match_parent"
@@ -99,6 +100,11 @@
                 android:textColor="#FF9800"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shop_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         </LinearLayout>
 
     </ScrollView>

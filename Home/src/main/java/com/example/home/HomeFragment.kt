@@ -6,17 +6,30 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
+import com.example.di.component.ActivityComponent
 import com.example.home.adapter.HomeDiscountAdapter
 import com.example.home.adapter.MyAdapter
+import com.example.home.adapter.ShopAdapter
 import com.example.home.common.*
+import com.example.home.mvp.injection.component.DaggerShopComponent
+import com.example.home.mvp.injection.component.ShopComponent
+import com.example.home.mvp.injection.module.ViewModule
+import com.example.home.mvp.model.entity.ShopEntity
+import com.example.home.mvp.presenter.ShopPresenter
+import com.example.home.mvp.view.ShopView
 import com.example.mvpcore.view.BaseFragment
+import com.example.mvpcore.view.MVPFragment
+import com.example.protocol.BaseReposEntity
 import com.youth.banner.BannerConfig
 import com.youth.banner.loader.ImageLoader
 import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.layout.*
+import javax.inject.Inject
 
 /**
 @Name:yao
@@ -25,25 +38,37 @@ import kotlinx.android.synthetic.main.layout.*
 @Package: com.example.home
 @ClassName: HomeFragment
  */
-class HomeFragment :BaseFragment(){
+class HomeFragment :MVPFragment(),ShopView{
+
+
+
     private var mScreenWidth = 0
     private val MIN_SCALE = .7f
     private val MAX_SCALE = 1.5f
     private var mMinWidth = 0
     private var mMaxWidth = 0
+
+    @Inject
+    lateinit var shopPresenter: ShopPresenter
+    var homeComponent: ShopComponent? = null
+
+    lateinit var shopAdapter: ShopAdapter
+
     override fun getLayoutId(): Int {
         return R.layout.fragment_home
     }
 
-
-    override fun initEvent() {
-
+    override fun initView() {
+        //商品列表样式
+        shop_rec.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
     }
 
-    override fun initView() {
-//        aaa.setOnClickListener {
-//            Toast.makeText(this,"aaaa",Toast.LENGTH_LONG).show()
-//        }
+    override fun initInjection() {
+        homeComponent = DaggerShopComponent.builder().activityComponent(activityComponent)
+            .viewModule(ViewModule(this))
+            .build()
+        homeComponent!!.injectShopComponent(this)
+        shopPresenter.getShop(1)
     }
 
     override fun initData() {
@@ -57,6 +82,10 @@ class HomeFragment :BaseFragment(){
         tv_goodstype_live.setOnClickListener {
             Toast.makeText(context,"直播",Toast.LENGTH_LONG).show()
         }
+    }
+
+    override fun initEvent() {
+
     }
 
     /**
@@ -149,6 +178,13 @@ class HomeFragment :BaseFragment(){
             }
         }
 
+    override fun shopSuccess(entity: BaseReposEntity<ShopEntity>) {
+        shopAdapter = ShopAdapter(entity.data)
+        shop_rec.adapter = shopAdapter
+    }
+
+    override fun shopFailed(throwable: Throwable) {
+    }
 
 
 }
