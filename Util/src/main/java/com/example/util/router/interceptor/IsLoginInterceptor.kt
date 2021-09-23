@@ -12,6 +12,8 @@ import com.example.common.utils.SpUtil
 @Interceptor(priority = 1,name = "isLoginInterceptor")
 class IsLoginInterceptor : IInterceptor {
 
+
+
     var mContext:Context ?= null
 
     override fun init(context: Context?) {
@@ -24,6 +26,5 @@ class IsLoginInterceptor : IInterceptor {
         if (decodeBase64!!.equals(BaseConstant.SP_ISLOGIN)){
             callback!!.onContinue(postcard)
         }
-
     }
 }
