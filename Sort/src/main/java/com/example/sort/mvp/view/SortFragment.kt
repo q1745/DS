@@ -121,6 +121,7 @@ class SortFragment : MVPFragment(),FirstView,SecondView{
     }
     //右侧recycleview获取数据成功
     override fun secondSuccess(entity: BaseReposEntity<SecondEntity>) {
+        LogUtil.e("123","secondSuccess" + entity.data.toString())
         //如果值为空，设置recycleview不可见，textview可见。相反则对应
         if(entity.data == null) {
             sort_second_list_recyclerview.visibility = View.GONE

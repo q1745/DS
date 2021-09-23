@@ -1,20 +1,19 @@
-package com.example.sort.mvp.injection.module
+package com.example.home.mvp.injection.module
 
+import com.example.home.mvp.model.ShopModel
 import com.example.mvpcore.IModel
-import com.example.sort.mvp.model.FirstModel
 import dagger.Module
 import dagger.Provides
 import dagger.multibindings.IntoMap
 import dagger.multibindings.StringKey
 
-
 @Module
-class FirstModule {
+class ShopModule {
 
     @IntoMap
     @StringKey("remoteModel")
     @Provides
-    fun providesFirstRemoteModel():IModel{
-        return FirstModel()
+    fun providesFirstRemoteModel(): IModel {
+        return ShopModel()
     }
 }
