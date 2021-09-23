@@ -17,15 +17,19 @@
         <!-- Customize your theme here. -->
     </style>
 
-
+    <!--取消白屏黑屏图片-->
+    <style name="Theme.welcome" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/img_startapp</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
 
     <style name="Theme.AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="android:windowFullscreen">false</item>
         <item name="android:windowIsTranslucent">false</item>
     </style>
     <style name="Theme.start" parent="Theme.MaterialComponents.DayNight.NoActionBar">
-        <item name="android:windowFullscreen">true</item>
-        <item name="android:windowIsTranslucent">true</item>
+        <!--<item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>-->
     </style>
 
 </resources>

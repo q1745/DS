@@ -8,15 +8,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DS">
+        android:theme="@style/Theme.welcome">
         <activity
             android:name=".WelcomeActivity"
-             >
-
-        </activity>
-        <activity
-            android:theme="@style/Theme.start"
-            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,6 +18,12 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:theme="@style/Theme.welcome"
             android:name=".MainActivity"
             android:exported="true">
 

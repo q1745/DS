@@ -51,6 +51,7 @@ dependencies {
     implementation project(path: ':Resources')
     implementation project(path: ':Common')
     implementation project(path: ':Util')
+    implementation project(path: ':DI')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation project(path: ':MVPCore')
     if (!isDebugHome.toBoolean()) {

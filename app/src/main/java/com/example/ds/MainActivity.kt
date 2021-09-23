@@ -15,6 +15,7 @@ import com.ashokvarma.bottomnavigation.BottomNavigationItem
 import com.example.Bbody
 import com.example.home.HomeFragment
 import com.example.net.RetrofitFactory
+import com.example.sort.mvp.view.SortFragment
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -37,8 +38,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         init()
 
-        //fragments.add(TestFragment())
         fragments.add(HomeFragment())
+        fragments.add(SortFragment())
+        fragments.add(TestFragment())
+        fragments.add(TestFragment())
+        fragments.add(TestFragment())
 
 
         //设置ViewPager适配器
@@ -74,7 +78,6 @@ class MainActivity : AppCompatActivity() {
                 positionOffset: Float,
                 positionOffsetPixels: Int,
             ) {
-//                main_bottomBar.selectTab(position)
             }
 
             override fun onPageSelected(position: Int) {
@@ -89,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         //底部导航联动ViewPager
         main_bottomBar.setTabSelectedListener(object : BottomNavigationBar.OnTabSelectedListener {
             override fun onTabSelected(position: Int) {
-                main_vp.currentItem = 0
+                main_vp.currentItem = position
             }
 
             override fun onTabUnselected(position: Int) {
