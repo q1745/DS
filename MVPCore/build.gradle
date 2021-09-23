@@ -39,10 +39,11 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.3.2'
     implementation 'androidx.appcompat:appcompat:1.2.0'
     implementation 'com.google.android.material:material:1.3.0'
+    implementation project(path: ':DI')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     //Dagger2
-    api configs.dagger
+    implementation configs.dagger
     kapt 'com.google.dagger:dagger-compiler:2.38.1'
 }

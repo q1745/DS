@@ -9,14 +9,13 @@ dependencyResolutionManagement {
 rootProject.name = "DS"
 include ':app'
 
-include ':stockpile'
+include ':Stockpile'
 
 include ':MVPCore'
 include ':Resources'
 include ':Common'
 
 
-include ':DaggerLib'
 include ':Net'
 
 include ':Sort'
@@ -24,3 +23,6 @@ include ':Sort'
 include ':Util'
 
 include ':Functions'
+
+include ':DI'
+include ':Home'

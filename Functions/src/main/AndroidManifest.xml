@@ -4,7 +4,7 @@
 
     <application>
         <activity
-            android:name=".showpping.view.ShowPpingFramgent"
+            android:name="com.example.mvpcore.view.BaseActivity"
             android:exported="true" />
     </application>
 
