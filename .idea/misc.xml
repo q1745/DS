@@ -11,10 +11,18 @@
         <entry key="..\:/Android_Files/Practical_first/DS/app/src/main/res/layout/activity_main.xml" value="0.1" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+        <entry key="..\:/Practical training/One/project/DS/Functions/src/main/res/layout/common_control.xml" value="0.15416666666666667" />
+        <entry key="..\:/Practical training/One/project/DS/Functions/src/main/res/layout/framgent_show_pping.xml" value="0.13958333333333334" />
+      </map>
+    </option>
+  </component>
+=======
+<<<<<<< HEAD
 =======
         <entry key="..\:/Android_Files/Practical_first/DS/app/src/main/res/layout/activity_welcome.xml" value="0.2" />
 >>>>>>> dev
         <entry key="..\:/Android_Files/Practical_first/DS/app/src/main/res/layout/fragment_test.xml" value="0.2390625" />
+>>>>>>> dfb682e8c5f8151365d5ef4821632821961660f1
 =======
         <entry key="..\:/workspace/DS/Sort/src/main/res/drawable/recyclerview_bolder.xml" value="0.27897435897435896" />
         <entry key="..\:/workspace/DS/Sort/src/main/res/layout/activity_main.xml" value="0.2713541666666667" />
@@ -27,6 +35,7 @@
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
 
   <component name="ExternalStorageConfigurationManager" enabled="true" />
+>>>>>>> 3461103b057773b9a9ae2680160785f851a67bf8
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
 
   <component name="ExternalStorageConfigurationManager" enabled="true" />
@@ -36,5 +45,8 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
   </component>
 </project>

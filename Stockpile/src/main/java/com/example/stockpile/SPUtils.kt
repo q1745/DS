@@ -56,7 +56,6 @@ object SPUtils {
         ed.putInt(key,value)
         ed.commit()
     }
-
     /**
      * 默认为0
      */
@@ -66,11 +65,8 @@ object SPUtils {
     /**
      * 删除
      */
-
     fun remove(key:String){
         ed.remove(key)
         ed.commit()
     }
-
-
 }
