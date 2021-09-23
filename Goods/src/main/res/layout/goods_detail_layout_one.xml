@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#f5f5f5"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <com.youth.banner.Banner
+        android:id="@+id/mGoodsDetailBanner"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"/>
+    <TextView
+        android:id="@+id/mGoodsDescTv"
+        style="@style/MatchWrap"
+        android:textColor="#666666"
+        android:paddingLeft="@dimen/margin_2"
+        android:paddingRight="@dimen/margin_2"
+        android:paddingTop="@dimen/margin_2"
+        android:background="@drawable/border_top"/>
+    <TextView
+        android:id="@+id/mGoodsPriceTv"
+        style="@style/MatchWrap"
+        android:padding="@dimen/margin_2"
+        android:textColor="@color/common_red"
+        android:textSize="@dimen/text_size_16"
+        android:background="@drawable/border_bottom"/>
+    <RelativeLayout
+        android:id="@+id/mSkuView"
+        style="@style/MatchWrap"
+        android:background="@drawable/border_all"
+        android:layout_marginTop="@dimen/margin_3"
+        android:padding="@dimen/margin_2">
+        <TextView
+            android:id="@+id/mSkuLabelTv"
+            style="@style/WrapWrap"
+            android:textSize="@dimen/text_size_12"
+            android:textColor="#999999"
+            android:text="已选"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/mSkuSelectedTv"
+            style="@style/WrapWrap"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:layout_marginRight="@dimen/margin_2"
+            android:layout_toLeftOf="@+id/mMoreIv"
+            android:layout_toRightOf="@id/mSkuLabelTv"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="8961蓝色，L,1件"
+            android:textColor="#333333" />
+
+        <ImageView
+            android:id="@+id/mMoreIv"
+            android:layout_height="@dimen/margin_6"
+            android:layout_width="@dimen/margin_6"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/more" />
+    </RelativeLayout>
+</LinearLayout>

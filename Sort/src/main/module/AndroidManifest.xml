@@ -3,7 +3,7 @@
     package="com.example.sort">
 
     <application
-        android:theme="@style/Theme.DS">
+        android:theme="@style/Theme.start">
         <activity
             android:name=".MainActivity"
             android:exported="true">
