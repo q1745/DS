@@ -4,10 +4,9 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <option name="testRunner" value="PLATFORM" />
+        <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="gradleJvm" value="#JAVA_HOME" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
@@ -20,9 +19,9 @@
             <option value="$PROJECT_DIR$/Net" />
             <option value="$PROJECT_DIR$/Resources" />
             <option value="$PROJECT_DIR$/Sort" />
+            <option value="$PROJECT_DIR$/Stockpile" />
             <option value="$PROJECT_DIR$/Util" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/stockpile" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
