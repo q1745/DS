@@ -9,6 +9,10 @@ ext{
             bottombar:"com.ashokvarma.android:bottom-navigation-bar:${version.bottombar}",
             baseAdapter:"com.github.CymChad:BaseRecyclerViewAdapterHelper:${version.baseAdapter}",
             banner:"com.youth.banner:banner:${version.banner}",
-            EventBus:"org.greenrobot:eventbus:${version.EventBus}"
+            EventBus:"org.greenrobot:eventbus:${version.EventBus}",
+            bugly_crashreport:"com.tencent.bugly:crashreport:${version.bugly_crashreport}",
+            bugly_nativecrashreport:"com.tencent.bugly:nativecrashreport:${version.bugly_nativecrashreport}",
+            flowlayout:"com.zhy:flowlayout-lib:${version.flowlayout}",
+            cloudcode:"com.aliyun.ams:alicloud-android-cloudcode:${version.cloudcode}"
     ]
 }

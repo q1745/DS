@@ -1,20 +1,11 @@
 package com.example.ds
 
-import android.Manifest
-import android.content.Context
 import com.example.mvpcore.view.BaseActivity
-
 import android.util.Log
 import com.alibaba.sdk.android.cloudcode.SplashAdView
-
 import com.alibaba.sdk.android.cloudcode.AdLoadListener
-
 import com.alibaba.sdk.android.cloudcode.SplashAdView.SplashAdInteractListener
 import android.content.Intent
-
-
-
-
 
 class SplashActivity : BaseActivity(){
 

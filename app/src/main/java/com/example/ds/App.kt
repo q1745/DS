@@ -42,7 +42,7 @@ class App : BaseApp() {
                 CloudCodeLog.setLevel(LogLevel.DEBUG)
             }
 
-        })
+        }).start()
     }
 
 

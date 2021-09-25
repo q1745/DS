@@ -1,6 +1,8 @@
 package com.example.goods.ui.activity
 
+import android.content.Context
 import android.graphics.Color
+import android.os.Bundle
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.example.goods.R
 import com.example.goods.adapter.GoodsFragmentVpAdapter
@@ -23,6 +25,12 @@ class GoodsActivity : BaseMVPActivity(){
 
     override fun initData() {
 
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        //绘制布局前换位原来的布局样式
+        setTheme(R.style.Theme_DS)
+        super.onCreate(savedInstanceState)
     }
 
     override fun initView() {
