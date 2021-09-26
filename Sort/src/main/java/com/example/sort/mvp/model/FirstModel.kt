@@ -6,6 +6,7 @@ import com.example.protocol.BaseReposEntity
 import com.example.sort.mvp.model.api.FirstApi
 import com.example.sort.mvp.model.entity.FirstEntity
 import com.example.sort.mvp.model.entity.FirstRequestEntity
+import com.example.sort.mvp.model.entity.SecondEntity
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers

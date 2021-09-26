@@ -18,11 +18,21 @@
         android:id="@+id/sort_first_list_recyclerview"
         android:layout_width="@dimen/margin_100"
         android:layout_height="wrap_content"
-        android:background="@drawable/recyclerview_bolder"
-        android:layout_marginTop="@dimen/margin_11" />
+        android:layout_marginTop="@dimen/margin_11"
+        android:background="@drawable/recyclerview_bolder" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/margin_300"
+        android:id="@+id/sort_second_list_text"
+        android:textSize="@dimen/widthAndHeight25"
+        android:text="敬请期待~~~~"
+        android:layout_width="@dimen/margen_280"
+        android:layout_height="wrap_content"/>
 
     <LinearLayout
-        android:layout_width="@dimen/margen_280"
+        android:layout_width="@dimen/margen_320"
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:orientation="vertical"
@@ -39,9 +49,11 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_2"
             android:layout_marginBottom="@dimen/margin_1"
-            android:text="商品热卖"
-            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_13"
+            android:text="热卖推荐"
+            android:textColor="#C8000000"
             android:textStyle="bold" />
+
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/sort_second_list_recyclerview"

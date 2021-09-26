@@ -3,6 +3,7 @@ package com.example.sort.mvp.model.api
 import com.example.protocol.BaseReposEntity
 import com.example.sort.mvp.model.entity.FirstEntity
 import com.example.sort.mvp.model.entity.FirstRequestEntity
+import com.example.sort.mvp.model.entity.SecondEntity
 import io.reactivex.Observable
 import retrofit2.http.Body
 import retrofit2.http.POST
