@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="gridStyle">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">#666666</item>
+        <item name="android:layout_rowWeight" tools:ignore="NewApi">1</item>
+        <item name="android:layout_columnWeight" tools:ignore="NewApi">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_margin">5dp</item>
+    </style>
+
+
+    <style name="SearchHeaderStyle">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:background">#FF9800</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingRight">15dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp
+        </item>
+    </style>
+
+
+</resources>

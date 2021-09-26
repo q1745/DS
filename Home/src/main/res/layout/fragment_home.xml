@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        style="@style/SearchHeaderStyle"
+        android:paddingLeft="15dp">
+        <EditText
+            android:id="@+id/mSearchEt"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:background="@drawable/home"
+            android:paddingLeft="15dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:drawableLeft="@drawable/icon_search"
+            android:drawablePadding="10dp"
+            android:layout_weight="1"
+            android:textCursorDrawable="@null"
+            android:maxLines="1"
+            android:hint="搜索商品/品类"
+            ></EditText>
+        <ImageView
+            android:src="@drawable/icon_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></ImageView>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_200"></com.youth.banner.Banner>
+
+            <com.example.home.widget.NewsFlipperView
+                android:id="@+id/news"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                ></com.example.home.widget.NewsFlipperView>
+            <include layout="@layout/layout"></include>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/text_size_20"
+                    android:src="@drawable/icon_special"
+                    ></ImageView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="火爆活动"
+                    ></TextView>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:id="@+id/rc"
+                ></androidx.recyclerview.widget.RecyclerView>
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_centerVertical="true"
+                    android:clipChildren="false"
+                    ></androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <TextView
+                android:layout_margin="5dp"
+                android:text="推荐商品"
+                android:gravity="center"
+                android:textColor="#FF9800"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></TextView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/shop_rec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

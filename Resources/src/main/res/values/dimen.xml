@@ -15,6 +15,7 @@
     <dimen name="margin_9">45dp</dimen>
     <dimen name="margin_10">50dp</dimen>
     <dimen name="margin_11">56dp</dimen>
+    <dimen name="margin_150">150dp</dimen>
     <dimen name="margin_110">110dp</dimen>
     <dimen name="margin_120">120dp</dimen>
 
@@ -30,6 +31,8 @@
     <dimen name="text_size_button">18sp</dimen>
 
     <dimen name="text_size_24">24sp</dimen>
+    <dimen name="text_size_36">36sp</dimen>
+    <dimen name="text_size_48">48sp</dimen>
     <dimen name="text_size_20">20sp</dimen>
     <dimen name="text_size_19">19sp</dimen>
     <dimen name="text_size_21">21sp</dimen>
@@ -46,7 +49,7 @@
     <!--红点-->
     <dimen name="dimen_red">8dp</dimen>
     <!-- 间隔线 -->
-    <dimen name="divider_height">0.5dp</dimen>
+    <dimen name="common_border">1px</dimen>
 
     <dimen name="btn_height">43dp</dimen>
     <!-- 标题栏高度 -->
@@ -71,5 +74,6 @@
     <dimen name="widthAndHeight45">45dp</dimen>
     <dimen name="widthAndHeight50">50dp</dimen>
     <dimen name="widthAndHeight55">55dp</dimen>
+
 
 </resources>

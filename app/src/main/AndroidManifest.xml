@@ -8,19 +8,39 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.start">
+        android:theme="@style/Theme.welcome">
         <activity
             android:name=".WelcomeActivity"
-            android:exported="true" >
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:theme="@style/Theme.welcome"
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+        <!-- 这里配置channelId -->
+        <meta-data
+            android:name="com.alibaba.sdk.android.cloudcode.channelId"
+            android:value="id=TEST_TENANT" />
+
+        <!-- 这里配置mediaId -->
+        <meta-data
+            android:name="com.alibaba.sdk.android.cloudcode.mediaId"
+            android:value="id=566388709907014657" />
+
+        <!-- 省略其它组件 -->
+
+
     </application>
 
 </manifest>

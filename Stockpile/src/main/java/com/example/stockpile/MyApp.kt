@@ -2,6 +2,7 @@ package com.example.stockpile
 
 import android.app.Application
 import android.content.Context
+import com.alibaba.android.arouter.launcher.ARouter
 
 /**
 @Name:yao
