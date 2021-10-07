@@ -4,16 +4,28 @@
     android:background="#ffffff"
     android:orientation="vertical"
     android:layout_height="wrap_content">
-    <ImageView
-        android:layout_width="180dp"
-        android:layout_height="180dp"
-        android:id="@+id/goodsim"
-        ></ImageView>
-    <TextView
-        android:layout_marginLeft="@dimen/widthAndHeight50"
-        android:textColor="#F80000"
-        android:text="1000"
+    <LinearLayout
+        android:layout_marginTop="@dimen/text_size_20"
+        android:layout_gravity="center"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        ></TextView>
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:id="@+id/goodsim"
+            ></ImageView>
+        <TextView
+            android:text="Apple MacBook Air 13.3英.."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></TextView>
+        <TextView
+            android:textColor="#F80000"
+            android:text="100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            ></TextView>
+    </LinearLayout>
+
 </LinearLayout>

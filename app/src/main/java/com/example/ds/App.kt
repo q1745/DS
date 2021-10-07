@@ -24,6 +24,8 @@ class App : BaseApp() {
     override fun onCreate() {
         super.onCreate()
 
+        context = this
+
         Thread(object : Runnable {
             override fun run() {
                 //降低优先级为10，相当于后台线程
@@ -43,6 +45,10 @@ class App : BaseApp() {
             }
 
         }).start()
+    }
+
+    companion object{
+        lateinit var context: Context
     }
 
 

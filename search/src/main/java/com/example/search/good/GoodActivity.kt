@@ -4,10 +4,11 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.common.BaseApplication.Companion.context
-import com.example.home.common.*
+
 import com.example.mvpcore.view.BaseMVPActivity
 import com.example.protocol.BaseReposEntity
 import com.example.search.R
+import com.example.search.common.*
 import com.example.search.good.adapter.GoodsAdapter
 import com.example.search.good.adapter.GoodsDisAdapter
 import com.example.search.good.injection.DaggerGoodComponet

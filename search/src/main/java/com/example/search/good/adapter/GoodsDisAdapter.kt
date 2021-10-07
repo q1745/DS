@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.home.adapter.BaseRecyclerViewAdapter
+
 import com.example.search.R
 import kotlinx.android.synthetic.main.item_goods.view.*
 

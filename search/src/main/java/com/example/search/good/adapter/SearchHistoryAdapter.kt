@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.home.adapter.BaseRecyclerViewAdapter
+
 import com.example.search.R
 import kotlinx.android.synthetic.main.layout_search_history_item.view.*
 

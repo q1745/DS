@@ -2,28 +2,24 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-android-extensions'
     id 'kotlin-kapt'
+    id 'com.android.library'
 }
-if (isDebugSort.toBoolean()) {
-    apply plugin: 'com.android.application'
-} else {
-    apply plugin: 'com.android.library'
-}
+
+
 
 def configs=rootProject.ext.dependenciesConfig
 def versions=rootProject.ext.dependenciesVersion
 def allVersion = rootProject.ext.versions
 android {
     compileSdkVersion allVersion.compilesdk
-
-    compileSdkVersion 31
-    buildToolsVersion "30.0.3"
+    buildToolsVersion allVersion.buildtools
 
     defaultConfig {
-        applicationId "com.example.search"
-        minSdkVersion 24
-        targetSdkVersion 31
-        versionCode 1
-        versionName "1.0"
+        //applicationId "com.example.search"
+        minSdkVersion allVersion.minsdk
+        targetSdkVersion allVersion.targetsdk
+        versionCode allVersion.versioncode
+        versionName allVersion.versionname
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -51,7 +47,6 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.0'
     implementation project(path: ':MVPCore')
-    implementation project(path: ':Home')
     implementation project(path: ':Net')
     implementation project(path: ':DI')
     implementation project(path: ':Stockpile')

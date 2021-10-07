@@ -67,6 +67,7 @@ dependencies {
     implementation project(path: ':DI')
     implementation project(path: ':Util')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation project(path: ':search')
 
     if (!isDebugSort.toBoolean()) {
         implementation project(path: ':Sort')

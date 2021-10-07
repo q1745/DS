@@ -3,13 +3,19 @@ package com.example.search
 import android.content.Intent
 import android.widget.Toast
 import androidx.core.view.isVisible
+
 import androidx.recyclerview.widget.LinearLayoutManager
+
+
 import com.example.mvpcore.view.BaseActivity
 import com.example.search.common.Constant
-import com.example.search.good.GoodActivity
 import com.example.search.good.adapter.SearchHistoryAdapter
+import com.example.search.good.view.MainActivity2
+
+
 import com.example.stockpile.SPUtils
 import kotlinx.android.synthetic.main.search.*
+
 
 /**
 @Name:yao
@@ -33,6 +39,8 @@ class SeachActivity :BaseActivity() {
          */
         mSearchTv.setOnClickListener {
             Toast.makeText(this,"搜索",Toast.LENGTH_LONG).show()
+            val intent= Intent(this, MainActivity2::class.java)
+            startActivity(intent)
             doSearch()
             loadData()
 
@@ -94,7 +102,6 @@ class SeachActivity :BaseActivity() {
      */
     private fun enterList(value: String) {
         val name = mKeywordEt.text.toString()
-        val intent= Intent(this,GoodActivity::class.java)
-        startActivity(intent)
+
     }
 }

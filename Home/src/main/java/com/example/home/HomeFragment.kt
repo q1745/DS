@@ -1,6 +1,8 @@
 package com.example.home
 
 import android.content.Context
+import android.content.Intent
+
 import android.graphics.Color
 import android.widget.ImageView
 import android.widget.RelativeLayout
@@ -20,10 +22,9 @@ import com.example.home.mvp.injection.module.ViewModule
 import com.example.home.mvp.model.entity.ShopEntity
 import com.example.home.mvp.presenter.ShopPresenter
 import com.example.home.mvp.view.ShopView
-import com.example.mvpcore.view.BaseFragment
 import com.example.mvpcore.view.MVPFragment
 import com.example.protocol.BaseReposEntity
-import com.example.util.LogUtil
+import com.example.search.SeachActivity
 import com.youth.banner.BannerConfig
 import com.youth.banner.loader.ImageLoader
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -82,6 +83,11 @@ class HomeFragment :MVPFragment(),ShopView{
         tv_goodstype_live.setOnClickListener {
             Toast.makeText(context,"直播",Toast.LENGTH_LONG).show()
         }
+
+        mSearchEt.setOnClickListener {
+            val intent = Intent(context,SeachActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun initEvent() {
@@ -106,6 +112,7 @@ class HomeFragment :MVPFragment(),ShopView{
         banner.setDelayTime(2000)
         banner.setIndicatorGravity(BannerConfig.RIGHT)
         banner.start()
+
     }
 
     /**
