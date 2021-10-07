@@ -1,17 +1,21 @@
 package com.example.home
 
 import android.content.Context
+import android.content.Intent
+
 import android.graphics.Color
+import android.view.View
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.alibaba.android.arouter.launcher.ARouter
 import com.bumptech.glide.Glide
-import com.example.di.component.ActivityComponent
+import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.example.home.adapter.HomeDiscountAdapter
 import com.example.home.adapter.MyAdapter
 import com.example.home.adapter.ShopAdapter
@@ -22,9 +26,9 @@ import com.example.home.mvp.injection.module.ViewModule
 import com.example.home.mvp.model.entity.ShopEntity
 import com.example.home.mvp.presenter.ShopPresenter
 import com.example.home.mvp.view.ShopView
-import com.example.mvpcore.view.BaseFragment
 import com.example.mvpcore.view.MVPFragment
 import com.example.protocol.BaseReposEntity
+import com.example.search.SeachActivity
 import com.youth.banner.BannerConfig
 import com.youth.banner.loader.ImageLoader
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -38,7 +42,7 @@ import javax.inject.Inject
 @Package: com.example.home
 @ClassName: HomeFragment
  */
-class HomeFragment :MVPFragment(),ShopView{
+class HomeFragment :MVPFragment(),ShopView,OnItemClickListener{
 
 
 
@@ -61,6 +65,7 @@ class HomeFragment :MVPFragment(),ShopView{
     override fun initView() {
         //商品列表样式
         shop_rec.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
+
     }
 
     override fun initInjection() {
@@ -81,6 +86,11 @@ class HomeFragment :MVPFragment(),ShopView{
         }
         tv_goodstype_live.setOnClickListener {
             Toast.makeText(context,"直播",Toast.LENGTH_LONG).show()
+        }
+
+        mSearchEt.setOnClickListener {
+            val intent = Intent(context,SeachActivity::class.java)
+            startActivity(intent)
         }
     }
 
@@ -106,6 +116,7 @@ class HomeFragment :MVPFragment(),ShopView{
         banner.setDelayTime(2000)
         banner.setIndicatorGravity(BannerConfig.RIGHT)
         banner.start()
+
     }
 
     /**
@@ -181,9 +192,15 @@ class HomeFragment :MVPFragment(),ShopView{
     override fun shopSuccess(entity: BaseReposEntity<ShopEntity>) {
         shopAdapter = ShopAdapter(entity.data)
         shop_rec.adapter = shopAdapter
+        shopAdapter.setOnItemClickListener(this)
     }
 
     override fun shopFailed(throwable: Throwable) {
+    }
+
+    override fun onItemClick(adapter: BaseQuickAdapter<*, *>, view: View, position: Int) {
+        ARouter.getInstance().build("/Goods/activity").withInt("goodId",4).navigation(activity)
+
     }
 
 

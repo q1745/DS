@@ -63,7 +63,8 @@ class DaoUser private constructor(context: Context){
     /**
      * 查询数据
      */
-    fun getquest(name:String):List<User>{
+    //name:String
+    fun getquest():List<User>{
         val list=userDao.queryBuilder().list()
         return list
     }

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:padding="15dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/corner_gray_white_bg">
+    <ImageView
+        android:layout_height="50dp"
+        android:layout_width="50dp"
+        android:src="@drawable/icon_search_history"/>
+    <TextView
+        android:id="@+id/mSearchHistoryTv"
+        style="@style/WrapWrap"
+        android:textColor="#090909"
+        android:layout_marginLeft="15dp"/>
+</LinearLayout>

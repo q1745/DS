@@ -16,9 +16,9 @@ android {
         versionCode allVersion.versioncode
         versionName allVersion.versionname
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
             }
         }
     }
@@ -37,6 +37,23 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    flavorDimensions "version"
+
+    productFlavors {
+
+        sanxing {
+            manifestPlaceholders = ["HHZHIQIANG": "sanxing"]
+        }
+
+        oppo {
+            manifestPlaceholders = ["HHZHIQIANG": "oppo"]
+        }
+
+        vivo {
+            manifestPlaceholders = ["HHZHIQIANG": "vivo"]
+        }
+    }
 }
 
 dependencies {
@@ -50,6 +67,7 @@ dependencies {
     implementation project(path: ':Util')
     implementation project(path: ':DI')
     implementation project(path: ':MVPCore')
+    implementation project(path: ':Live')
     if (!isDebugHome.toBoolean()) {
         implementation project(path: ':Home')
     }
@@ -58,6 +76,12 @@ dependencies {
     }
     if (!isDebugGoods.toBoolean()) {
         implementation project(path: ':Goods')
+    }
+    if (!isDebugSearch.toBoolean()) {
+        implementation project(path: ':search')
+    }
+    if (!isDebugUserCenter.toBoolean()) {
+        implementation project(path: ':UserCenter')
     }
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.+'

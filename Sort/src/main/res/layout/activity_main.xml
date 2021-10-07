@@ -9,7 +9,7 @@
     <fragment
         android:tag="@string/app_name"
         android:id="@+id/aaa"
-        class="com.example.sort.mvp.view.SortFragment"
+        class="com.example.sort.mvp.view.CarFramgent"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 

@@ -12,6 +12,7 @@ import android.content.pm.ActivityInfo
 
 import android.content.pm.PackageInfo
 import android.os.Process
+import com.alibaba.android.arouter.launcher.ARouter
 import com.alibaba.sdk.android.cloudcode.CloudCodeInitializer
 import com.alibaba.sdk.android.cloudcode.CloudCodeLog
 import com.alibaba.sdk.android.logger.LogLevel
@@ -23,6 +24,8 @@ class App : BaseApp() {
 
     override fun onCreate() {
         super.onCreate()
+
+        context = this
 
         Thread(object : Runnable {
             override fun run() {
@@ -43,6 +46,12 @@ class App : BaseApp() {
             }
 
         }).start()
+
+        ARouter.init(this)
+    }
+
+    companion object{
+        lateinit var context: Context
     }
 
 

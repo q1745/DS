@@ -20,8 +20,6 @@ android {
         targetSdk allVersion.targetsdk
         versionCode allVersion.versioncode
         versionName allVersion.versionname
-
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -67,6 +65,7 @@ dependencies {
     implementation project(path: ':Util')
     implementation project(path: ':Common')
     implementation project(path: ':DI')
+    implementation project(path: ':Stockpile')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -75,4 +74,5 @@ dependencies {
     kapt configs.daggerAnnotation
     //万能适配器
     implementation configs.baseAdapter
+
 }

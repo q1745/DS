@@ -13,5 +13,4 @@ class SecondRecAdapter(list: MutableList<SecondEntity>) :
         holder.setText(R.id.second_item_name,item.categoryName)
         GlideUtils.loadImage(context,item.categoryIcon,holder.getView(R.id.second_item_img))
     }
-
 }

@@ -2,26 +2,14 @@ package com.example.ds
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-
-import android.util.Log
-
-
-import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.ashokvarma.bottomnavigation.BottomNavigationItem
-import com.example.Bbody
 import com.example.home.HomeFragment
-//import com.example.home.HomeFragment
-import com.example.net.RetrofitFactory
+import com.example.sort.mvp.view.CarFragment
 import com.example.sort.mvp.view.SortFragment
-import io.reactivex.Observer
-import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.Disposable
-import io.reactivex.schedulers.Schedulers
-import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -41,7 +29,7 @@ class MainActivity : AppCompatActivity() {
 
         fragments.add(HomeFragment())
         fragments.add(SortFragment())
-        fragments.add(TestFragment())
+        fragments.add(CarFragment())
         fragments.add(TestFragment())
         fragments.add(TestFragment())
 

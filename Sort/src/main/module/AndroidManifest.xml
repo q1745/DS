@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.sort">
 
-    <application
-        android:theme="@style/Theme.welcome">
+    <application >
         <activity
             android:name=".MainActivity"
             android:exported="true">

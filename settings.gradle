@@ -1,14 +1,14 @@
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        google()
-        mavenCentral()
-        maven {
-            url 'https://maven.aliyun.com/repository/public/'
-        }
-        jcenter() // Warning: this repository is going to shut down soon
-    }
-}
+//dependencyResolutionManagement {
+//    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+//    repositories {
+//        google()
+//        mavenCentral()
+//        maven {
+//            url 'https://maven.aliyun.com/repository/public/'
+//        }
+//        jcenter() // Warning: this repository is going to shut down soon
+//    }
+//}
 rootProject.name = "DS"
 include ':app'
 
@@ -28,8 +28,16 @@ include ':Util'
 include ':Functions'
 
 include ':DI'
+include ':Live'
+
 
 include ':Home'
 
 include ':Goods'
 
+
+include ':UserCenter'
+
+include ':search'
+
+include ':Pay'
