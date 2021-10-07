@@ -33,3 +33,4 @@ include ':Home'
 
 include ':Goods'
 
+include ':UserCenter'

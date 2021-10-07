@@ -2,10 +2,11 @@
 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/first_item_TextView"
     android:text="电商"
+    android:background="@drawable/recycleview_decoration"
     android:textColor="@color/black"
     android:gravity="center"
-    android:textSize="@dimen/text_size_20"
+    android:textSize="@dimen/sp_14"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/widthAndHeight50">
+    android:layout_height="@dimen/dp_40">
 
 </TextView>

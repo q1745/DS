@@ -17,9 +17,9 @@ android {
         versionCode allVersion.versioncode
         versionName allVersion.versionname
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        javaCompileOptions {
-            annotationProcessorOptions {
-                arguments = [AROUTER_MODULE_NAME: project.getName()]
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
             }
         }
     }
@@ -51,9 +51,15 @@ dependencies {
     implementation project(path: ':Resources')
     implementation project(path: ':Common')
     implementation project(path: ':Util')
+    implementation project(path: ':DI')
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation project(path: ':MVPCore')
-    implementation project(path: ':Home')
+    if (!isDebugHome.toBoolean()) {
+        implementation project(path: ':Home')
+    }
+    if (!isDebugSort.toBoolean()) {
+        implementation project(path: ':Sort')
+    }
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

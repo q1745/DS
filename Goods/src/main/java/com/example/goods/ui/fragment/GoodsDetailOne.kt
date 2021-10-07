@@ -4,12 +4,10 @@ import android.app.Activity
 import android.content.Context
 import android.util.Log
 import android.view.Gravity
-import android.view.LayoutInflater
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.ScaleAnimation
 import android.widget.ImageView
-import android.widget.PopupWindow
 import com.example.goods.R
 import com.example.goods.injection.component.DaggerDetailComponent
 import com.example.goods.injection.module.ModelModule
@@ -34,7 +32,7 @@ class GoodsDetailOne : MVPFragment() , DetailView{
     @Inject
     lateinit var presenter : DetailPresenter
     //商品弹层
-    lateinit var goodSkuPopView: PopupWindow
+    lateinit var goodSkuPopView: GoodSkuPopView
     //SKU弹层出场动画
     private lateinit var mAnimationStart: Animation
     //SKU弹层退场动画
@@ -45,7 +43,7 @@ class GoodsDetailOne : MVPFragment() , DetailView{
             .modelModule(ModelModule())
             .viewModule(ViewModule(this))
             .build().injectFragment(this)
-        presenter.getGoodsDetail(3)
+        presenter.getGoodsDetail((context as GoodsActivity).getGoodsId())
     }
 
     override fun initEvent() {
@@ -113,8 +111,7 @@ class GoodsDetailOne : MVPFragment() , DetailView{
      * 初始化PopupWindow
      */
     fun initPopupWindow(){
-        goodSkuPopView = PopupWindow(activity as BaseActivity)
-        goodSkuPopView.contentView = LayoutInflater.from(context).inflate(R.layout.skuview_layout,null)
+        goodSkuPopView = GoodSkuPopView(context as Activity)
 
         goodSkuPopView.setOnDismissListener {
             (activity as BaseActivity).contentView.startAnimation(mAnimationEnd)

@@ -2,6 +2,7 @@ package com.example.mvpcore.view
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import com.example.di.BaseApp
 import com.example.di.component.ActivityComponent
 import com.example.di.component.DaggerActivityComponent
@@ -19,12 +20,17 @@ abstract class BaseMVPActivity : BaseActivity(){
 
     protected var appComponent: ActivityComponent? = null
 
-    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
-        super.onCreate(savedInstanceState, persistentState)
+//    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+//        super.onCreate(savedInstanceState, persistentState)
+//        appComponent = DaggerActivityComponent.builder().activityModule(ActivityModule(this))
+//            .appComponent((application as BaseApp).daggerAppComponent).build()
+//        injectComponent()
+//    }
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
         appComponent = DaggerActivityComponent.builder().activityModule(ActivityModule(this))
             .appComponent((application as BaseApp).daggerAppComponent).build()
-
         injectComponent()
     }
 

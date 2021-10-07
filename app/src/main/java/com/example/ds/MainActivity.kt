@@ -10,11 +10,14 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentStatePagerAdapter
 import androidx.viewpager.widget.ViewPager
+import com.alibaba.android.arouter.launcher.ARouter
 import com.ashokvarma.bottomnavigation.BottomNavigationBar
 import com.ashokvarma.bottomnavigation.BottomNavigationItem
 import com.example.Bbody
 import com.example.home.HomeFragment
+//import com.example.home.HomeFragment
 import com.example.net.RetrofitFactory
+import com.example.sort.mvp.view.SortFragment
 import io.reactivex.Observer
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.Disposable
@@ -33,14 +36,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         //绘制布局前换位原来的布局样式
         setTheme(R.style.Theme_DS)
-        window.setBackgroundDrawable(null)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         init()
 
-        //fragments.add(TestFragment())
         fragments.add(HomeFragment())
+        fragments.add(SortFragment())
+        fragments.add(TestFragment())
+        fragments.add(TestFragment())
+        fragments.add(TestFragment())
 
+
+        ARouter.getInstance().build("/Goods/activity").withInt("goodId",4).navigation(this)
 
         //设置ViewPager适配器
         main_vp.adapter = object : FragmentStatePagerAdapter(supportFragmentManager,FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
@@ -75,7 +82,6 @@ class MainActivity : AppCompatActivity() {
                 positionOffset: Float,
                 positionOffsetPixels: Int,
             ) {
-//                main_bottomBar.selectTab(position)
             }
 
             override fun onPageSelected(position: Int) {
@@ -90,7 +96,7 @@ class MainActivity : AppCompatActivity() {
         //底部导航联动ViewPager
         main_bottomBar.setTabSelectedListener(object : BottomNavigationBar.OnTabSelectedListener {
             override fun onTabSelected(position: Int) {
-                main_vp.currentItem = 0
+                main_vp.currentItem = position
             }
 
             override fun onTabUnselected(position: Int) {
