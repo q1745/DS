@@ -1,12 +1,11 @@
-plugins {
-    id 'kotlin-android'
-    id 'kotlin-android-extensions'
-    id 'kotlin-kapt'
-    id 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+if (isDebugSearch.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
 }
-
-
-
 def configs=rootProject.ext.dependenciesConfig
 def versions=rootProject.ext.dependenciesVersion
 def allVersion = rootProject.ext.versions
@@ -15,7 +14,9 @@ android {
     buildToolsVersion allVersion.buildtools
 
     defaultConfig {
-        //applicationId "com.example.search"
+        if (isDebugSearch.toBoolean()) {
+            applicationId "com.example.search"
+        }
         minSdkVersion allVersion.minsdk
         targetSdkVersion allVersion.targetsdk
         versionCode allVersion.versioncode
@@ -36,6 +37,21 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    /**
+     * sourceSets 可以指定路径
+     *
+     * 这里是判断是否Debug模式，是加载一个清单，不是则加载另一个清单
+     */
+    sourceSets {
+        main {
+            if (isDebugSearch.toBoolean()) {
+                manifest.srcFile "src/main/AndroidManifest.xml"
+            } else {
+                manifest.srcFile "src/main/module/AndroidManifest.xml"
+            }
+        }
     }
 }
 

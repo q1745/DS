@@ -9,6 +9,7 @@ import android.view.View
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.alibaba.android.arouter.launcher.ARouter
 import com.chad.library.adapter.base.BaseQuickAdapter
 import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.example.mvpcore.view.MVPFragment
@@ -16,6 +17,7 @@ import com.example.protocol.BaseReposEntity
 import com.example.sort.R
 import com.example.sort.adapter.FirstRecAdapter
 import com.example.sort.adapter.SecondRecAdapter
+import com.example.sort.entity.ShopEntity
 import com.example.sort.mvp.injection.component.DaggerSortComponent
 import com.example.sort.mvp.injection.component.SortComponent
 
@@ -31,6 +33,7 @@ import kotlinx.android.synthetic.main.fragment_sort_layout.*
 import javax.inject.Inject
 
 class SortFragment : MVPFragment(),FirstView,SecondView{
+
 
 
     @Inject
@@ -130,7 +133,7 @@ class SortFragment : MVPFragment(),FirstView,SecondView{
         //右侧点击事件
         secondRecAdapter!!.setOnItemClickListener(object : OnItemClickListener {
             override fun onItemClick(adapter: BaseQuickAdapter<*, *>, view: View, position: Int) {
-
+                ARouter.getInstance().build("/Goods/activity").withInt("goodId",4).navigation(activity)
             }
         })
 

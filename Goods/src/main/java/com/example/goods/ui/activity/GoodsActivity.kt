@@ -3,6 +3,8 @@ package com.example.goods.ui.activity
 import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
+import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.FragmentStatePagerAdapter
 import com.alibaba.android.arouter.facade.annotation.Autowired
 import com.alibaba.android.arouter.facade.annotation.Route
@@ -26,7 +28,12 @@ class GoodsActivity : BaseActivity(){
     }
 
     override fun initData() {
+        detail_goback.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+                this@GoodsActivity.finish()
+            }
 
+        })
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,6 +49,13 @@ class GoodsActivity : BaseActivity(){
         , mutableListOf(GoodsDetailOne(),GoodsDetailTwo()),
             mutableListOf("商品","详情"))
         goods_activity_tablayout.setupWithViewPager(goods_activity_viewpager)
+
+        goods_activity_intocar.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                Toast.makeText(this@GoodsActivity, "加入成功！", Toast.LENGTH_SHORT).show()
+            }
+
+        })
     }
 
     override fun getLayoutId(): Int {

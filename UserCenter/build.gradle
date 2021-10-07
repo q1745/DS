@@ -1,16 +1,21 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+if (isDebugUserCenter.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
 }
-def configs = rootProject.ext.dependenciesConfig
+def configs=rootProject.ext.dependenciesConfig
+def versions=rootProject.ext.dependenciesVersion
 def allVersion = rootProject.ext.versions
 android {
     compileSdkVersion 31
 
     defaultConfig {
-        applicationId "com.shuke.usercenter"
+        if (isDebugUserCenter.toBoolean()) {
+            applicationId "com.shuke.usercenter"
+        }
         minSdkVersion 21
         targetSdkVersion 31
         versionCode 1
@@ -37,6 +42,21 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+
+    /**
+     * sourceSets 可以指定路径
+     *
+     * 这里是判断是否Debug模式，是加载一个清单，不是则加载另一个清单
+     */
+    sourceSets {
+        main {
+            if (isDebugUserCenter.toBoolean()) {
+                manifest.srcFile "src/main/AndroidManifest.xml"
+            } else {
+                manifest.srcFile "src/main/module/AndroidManifest.xml"
+            }
+        }
     }
 }
 

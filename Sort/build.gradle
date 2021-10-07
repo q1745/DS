@@ -74,4 +74,5 @@ dependencies {
     kapt configs.daggerAnnotation
     //万能适配器
     implementation configs.baseAdapter
+
 }

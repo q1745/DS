@@ -25,10 +25,11 @@
     </RelativeLayout>
 
     <ImageView
-        android:padding="@dimen/margin_2"
-        android:src="@mipmap/goback"
+        android:id="@+id/detail_goback"
         android:layout_width="@dimen/margin_11"
-        android:layout_height="@dimen/margin_11"/>
+        android:layout_height="@dimen/margin_11"
+        android:padding="@dimen/margin_2"
+        android:src="@mipmap/goback" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/goods_activity_viewpager"

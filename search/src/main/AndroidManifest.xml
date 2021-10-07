@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.search">
 
-    <application android:theme="@style/Theme.welcome">
+    <application android:theme="@style/Theme.DS">
         <activity android:name=".good.view.MainActivity2"></activity>
         <activity
             android:name=".SeachActivity"

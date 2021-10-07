@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.search">
+
+    <application >
+        <activity
+            android:name=".SeachActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".good.view.MainActivity2"></activity>
+    </application>
+
+</manifest>

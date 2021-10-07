@@ -1,4 +1,5 @@
 package com.example.search.good
+import android.view.View
 import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -44,7 +45,12 @@ class GoodActivity :BaseMVPActivity(),GoodsView{
     }
 
     override fun initEvent() {
+        mLeftIv.setOnClickListener(object : View.OnClickListener {
+            override fun onClick(v: View?) {
+                finish()
+            }
 
+        })
     }
 
     override fun initData() {

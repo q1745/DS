@@ -59,7 +59,8 @@ class SeachActivity :BaseActivity() {
     }
 
     override fun initView() {
-
+        //绘制布局前换位原来的布局样式
+        setTheme(R.style.Theme_DS)
     }
 
     override fun getLayoutId(): Int {

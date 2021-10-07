@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 
 import android.graphics.Color
+import android.view.View
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
@@ -11,7 +12,10 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.alibaba.android.arouter.launcher.ARouter
 import com.bumptech.glide.Glide
+import com.chad.library.adapter.base.BaseQuickAdapter
+import com.chad.library.adapter.base.listener.OnItemClickListener
 import com.example.home.adapter.HomeDiscountAdapter
 import com.example.home.adapter.MyAdapter
 import com.example.home.adapter.ShopAdapter
@@ -38,7 +42,7 @@ import javax.inject.Inject
 @Package: com.example.home
 @ClassName: HomeFragment
  */
-class HomeFragment :MVPFragment(),ShopView{
+class HomeFragment :MVPFragment(),ShopView,OnItemClickListener{
 
 
 
@@ -188,9 +192,15 @@ class HomeFragment :MVPFragment(),ShopView{
     override fun shopSuccess(entity: BaseReposEntity<ShopEntity>) {
         shopAdapter = ShopAdapter(entity.data)
         shop_rec.adapter = shopAdapter
+        shopAdapter.setOnItemClickListener(this)
     }
 
     override fun shopFailed(throwable: Throwable) {
+    }
+
+    override fun onItemClick(adapter: BaseQuickAdapter<*, *>, view: View, position: Int) {
+        ARouter.getInstance().build("/Goods/activity").withInt("goodId",4).navigation(activity)
+
     }
 
 

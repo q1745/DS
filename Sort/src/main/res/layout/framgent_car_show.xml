@@ -18,7 +18,7 @@
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_weight="9"
-        android:id="@+id/show_view_recyc"
+        android:id="@+id/car_recy"
         android:layout_width="match_parent"
         android:layout_height="0dp">
     </androidx.recyclerview.widget.RecyclerView>
@@ -55,6 +55,7 @@
                 android:layout_height="wrap_content">
             </TextView>
             <TextView
+                android:id="@+id/money"
                 android:textSize="25dp"
                 android:textColor="#FF0000"
                 android:text="0"
@@ -63,6 +64,7 @@
             </TextView>
         </LinearLayout>
         <Button
+            android:id="@+id/car_pay_btn"
             android:text="支付"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"></Button>
