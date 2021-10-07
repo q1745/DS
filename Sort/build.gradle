@@ -20,8 +20,6 @@ android {
         targetSdk allVersion.targetsdk
         versionCode allVersion.versioncode
         versionName allVersion.versionname
-
-
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -39,6 +37,11 @@ android {
         jvmTarget = '1.8'
     }
 
+    /**
+     * sourceSets 可以指定路径
+     *
+     * 这里是判断是否Debug模式，是加载一个清单，不是则加载另一个清单
+     */
     sourceSets {
         main {
             if (isDebugSort.toBoolean()) {
@@ -62,9 +65,13 @@ dependencies {
     implementation project(path: ':Util')
     implementation project(path: ':Common')
     implementation project(path: ':DI')
+    implementation project(path: ':Stockpile')
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-    kapt "com.google.dagger:dagger-compiler:$versions.dagger"
+
+    //Dagger2注解器处理器
+    kapt configs.daggerAnnotation
+    //万能适配器
     implementation configs.baseAdapter
 }

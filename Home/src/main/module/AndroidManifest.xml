@@ -2,12 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.home">
 
-    <application
-        android:theme="@style/Theme.welcome">
+    <application android:theme="@style/Theme.welcome">
+        <activity android:name="com.example.MainActivity" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
     </application>
 
 </manifest>

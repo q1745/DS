@@ -1,20 +1,21 @@
-plugins {
-    id 'com.android.application'
-    id 'kotlin-android'
-    id 'kotlin-kapt'
-    id 'kotlin-android-extensions'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+if (isDebugGoods.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
 }
 def configs=rootProject.ext.dependenciesConfig
-def versions=rootProject.ext.dependenciesVersion
 def allVersion = rootProject.ext.versions
 android {
-    compileSdkVersion 30
+    compileSdkVersion allVersion.compilesdk
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion allVersion.minsdk
+        targetSdkVersion allVersion.targetsdk
+        versionCode allVersion.versioncode
+        versionName allVersion.versionname
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -39,6 +40,21 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+
+    /**
+     * sourceSets 可以指定路径
+     *
+     * 这里是判断是否Debug模式，是加载一个清单，不是则加载另一个清单
+     */
+    sourceSets {
+        main {
+            if (isDebugGoods.toBoolean()) {
+                manifest.srcFile "src/main/AndroidManifest.xml"
+            } else {
+                manifest.srcFile "src/main/module/AndroidManifest.xml"
+            }
+        }
+    }
 }
 
 dependencies {
@@ -56,10 +72,11 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation 'com.alibaba:arouter-api:1.4.1'
+    //ARouter依赖
+    implementation configs.arouter
     kapt configs.arouter_anno //ARouter依赖
-
+    //banner
     implementation configs.banner
-
+    //Dagger2注解处理器
     kapt configs.daggerAnnotation
 }

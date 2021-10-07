@@ -1,19 +1,25 @@
 ext{
     dependenciesVersion=[
             dagger:"2.35.1",
-            glide:"4.12.0",
+            glide:"4.9.0",
             arouter:"1.4.1",
             arouter_anno:"1.2.2",
             bottombar:"2.0.5",
             baseAdapter:"3.0.0",
             banner:"1.4.10",
-            EventBus:"3.0.0"
+            EventBus:"3.0.0",
+            bugly_crashreport:"3.4.4",
+            bugly_nativecrashreport:"3.9.2",
+            flowlayout:"1.0.3",
+            cloudcode:"1.0.5"
     ]
     versions=[
             compilesdk:30,
             minsdk:21,
             targetsdk:31,
             versioncode:1,
-            versionname:"1.0"
+            versionname:"1.0",
+            buildtools:"30.0.3"
+
     ]
 }

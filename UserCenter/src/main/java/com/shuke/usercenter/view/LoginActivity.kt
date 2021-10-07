@@ -7,6 +7,7 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.example.mvpcore.view.BaseMVPActivity
 import com.shuke.usercenter.R
+import com.shuke.usercenter.injection.component.DaggerUserCenterComponent
 
 import com.shuke.usercenter.injection.module.ModelModule
 import com.shuke.usercenter.injection.module.ViewModule

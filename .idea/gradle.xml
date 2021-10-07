@@ -15,6 +15,7 @@
             <option value="$PROJECT_DIR$/Functions" />
             <option value="$PROJECT_DIR$/Goods" />
             <option value="$PROJECT_DIR$/Home" />
+            <option value="$PROJECT_DIR$/Live" />
             <option value="$PROJECT_DIR$/MVPCore" />
             <option value="$PROJECT_DIR$/Net" />
             <option value="$PROJECT_DIR$/Resources" />
@@ -23,6 +24,7 @@
             <option value="$PROJECT_DIR$/UserCenter" />
             <option value="$PROJECT_DIR$/Util" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/search" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

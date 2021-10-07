@@ -17,4 +17,11 @@ class FirstModule {
     fun providesFirstRemoteModel():IModel{
         return FirstModel()
     }
+
+    @IntoMap
+    @StringKey("localmodel")
+    @Provides
+    fun providesFirstlocalModel():IModel{
+        return FirstModel()
+    }
 }
