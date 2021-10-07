@@ -19,19 +19,5 @@ class MainActivity : AppCompatActivity() {
         setTheme(R.style.Theme_DS)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//        banner.setImageLoader(object : ImageLoader(){
-//            override fun displayImage(context: Context?, path: Any?, imageView: ImageView?) {
-//                if (context != null) {
-//                    if (imageView != null) {
-//                        Glide.with(context).load(path).into(imageView)
-//                    }
-//                }
-//            }
-//        })
-//        banner.setImages(listOf(HOME_BANNER_ONE, HOME_BANNER_ONE, HOME_BANNER_THREE, HOME_BANNER_FOUR))
-//        banner.setBannerAnimation(com.youth.banner.Transformer.Accordion)
-//        banner.setDelayTime(2000)
-//        banner.setIndicatorGravity(BannerConfig.RIGHT)
-//        banner.start()
     }
 }

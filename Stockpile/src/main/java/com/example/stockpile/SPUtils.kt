@@ -26,6 +26,13 @@ object SPUtils {
         ed.putBoolean(key,value)
         ed.commit()
     }
+    /**
+     * set
+     */
+    fun getStringSet(key: String): MutableSet<String>? {
+        val set = setOf<String>()
+        return sp.getStringSet(key, set)
+    }
 
     /**
      * 默认为false
@@ -62,6 +69,16 @@ object SPUtils {
     fun getInt(key:String):Int{
         return sp.getInt(key,0)
     }
+
+    fun putStringSet(key: String, set: Set<String>) {
+        val localSet = getStringSet(key)?.toMutableSet()
+        if (localSet != null) {
+            localSet.addAll(set)
+        }
+        ed.putStringSet(key, localSet)
+        ed.commit()
+    }
+
     /**
      * 删除
      */

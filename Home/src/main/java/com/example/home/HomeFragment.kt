@@ -6,12 +6,10 @@ import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
 import android.widget.Toast
-import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.bumptech.glide.Glide
-import com.example.di.component.ActivityComponent
 import com.example.home.adapter.HomeDiscountAdapter
 import com.example.home.adapter.MyAdapter
 import com.example.home.adapter.ShopAdapter
@@ -25,6 +23,7 @@ import com.example.home.mvp.view.ShopView
 import com.example.mvpcore.view.BaseFragment
 import com.example.mvpcore.view.MVPFragment
 import com.example.protocol.BaseReposEntity
+import com.example.util.LogUtil
 import com.youth.banner.BannerConfig
 import com.youth.banner.loader.ImageLoader
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -61,6 +60,7 @@ class HomeFragment :MVPFragment(),ShopView{
     override fun initView() {
         //商品列表样式
         shop_rec.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
+
     }
 
     override fun initInjection() {
