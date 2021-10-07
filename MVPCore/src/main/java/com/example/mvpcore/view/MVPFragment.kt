@@ -15,7 +15,6 @@ abstract class MVPFragment : BaseFragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         activityComponent = DaggerActivityComponent.builder()
             .appComponent((activity!!.application as BaseApp).daggerAppComponent)
             .activityModule(ActivityModule(activity!!))

@@ -6,10 +6,6 @@ import android.graphics.Paint
 import android.graphics.Rect
 import android.util.Log
 import android.view.View
-import android.widget.Toast
-import androidx.core.view.children
-import androidx.core.view.isGone
-import androidx.core.view.isVisible
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +17,6 @@ import com.example.sort.R
 import com.example.sort.adapter.FirstRecAdapter
 import com.example.sort.adapter.SecondRecAdapter
 import com.example.sort.mvp.injection.component.DaggerSortComponent
-//import com.example.sort.mvp.injection.component.DaggerSortComponent
 import com.example.sort.mvp.injection.component.SortComponent
 
 import com.example.sort.mvp.injection.module.SecondViewModule
@@ -70,7 +65,6 @@ class SortFragment : MVPFragment(),FirstView,SecondView{
     }
 
     override fun initInjection() {
-
         sortComponent = DaggerSortComponent.builder().activityComponent(activityComponent)
             .viewModule(ViewModule(this))
             .secondViewModule(SecondViewModule(this))
